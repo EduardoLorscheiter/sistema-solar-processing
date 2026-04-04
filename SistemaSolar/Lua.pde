@@ -13,21 +13,23 @@ class Moon {
   }
 
   void update() {
-    // Increment the angle to rotate
+    // Incremeta o ângulo de rotação
     theta += orbitspeed;
   }
 
   void display() {
-    // Before rotation and translation, the state of the matrix is saved with pushMatrix().
+    // Antes da rotação e translação, o estado da matriz é salvo com pushMatrix()
     pushMatrix();
-    // Rotate orbit
+    
+    // Carrega a rotação da órbita da lua
     rotate(theta);
-    // translate out distance
+    // Carrega a distância da lua em relação ao planeta
     translate(distance, 0);
     stroke(0);
     fill(175);
     ellipse(0, 0, diameter, diameter);
-    // Once the planet is drawn, the matrix is restored with popMatrix() so that the next planet is not affected.
+    
+    // Uma vez que a lua é desenhada, a matriz é restaurada com popMatrix() para que a próxima lua não seja afetada
     popMatrix();
   }
 }

@@ -36,21 +36,22 @@ class Planet {
   }
 
   void display() {
-    // Before rotation and translation, the state of the matrix is saved with pushMatrix().
+    // Antes da rotação e translação, o estado da matriz é salvo com pushMatrix()
     pushMatrix();
-    // Rotate orbit
+    
+    // Carrega a rotação da órbita do planeta
     rotate(theta);
-    // translate out distance
+    // Carrega a distância do planeta em relação ao sol
     translate(distance, 0);
     stroke(0);
     fill(planet_color);
     ellipse(0, 0, diameter, diameter);
-    // The planet is drawn, now draw the moon
+    // Desenha todas as luas em volta do planeta
     for (int m = 0; m < moons.length; m++ ) {
       moons[m].display();
     }
 
-    // Once the planet is drawn, the matrix is restored with popMatrix() so that the next planet is not affected.
+    // Uma vez que o planeta é desenhado, a matriz é restaurada com popMatrix() para que o próximo planeta não seja afetado
     popMatrix();
   }
 }

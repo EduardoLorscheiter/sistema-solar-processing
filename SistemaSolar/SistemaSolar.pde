@@ -1,7 +1,7 @@
 // Cria um array de 3 objetos "Planeta"
 Planet[] planets = new Planet[3];
 
-// Dados para desenhar estrelas no céu (estética)
+// Dados para desenhar estrelas no espaço (estética)
 int numStars = 200;
 float[] starsX = new float[numStars];
 float[] starsY = new float[numStars];
@@ -11,12 +11,14 @@ void setup() {
 
   // Inicializa os objetos "Planeta"
   for (int p = 0; p < planets.length; p++) {
-    planets[p] = new Planet(60 + p*36, 24, color(random(0, 255), random(0, 255), random(0, 255)), 2);
+    color planet_color = color(random(0, 255), random(0, 255), random(0, 255));
+    planets[p] = new Planet(100 + p*36, 24, planet_color, 2);
   }
 
-  for (int i = 0; i < numStars; i++) {
-    starsX[i] = random(width);
-    starsY[i] = random(height);
+  // Gera uma posição XY aleatória para todas as estrelas
+  for (int s = 0; s < numStars; s++) {
+    starsX[s] = random(width);
+    starsY[s] = random(height);
   }
 }
 
@@ -24,7 +26,7 @@ void draw() {
   // Desenha o espaço em azul escuro
   background(10, 15, 30);
 
-  // Estrelas
+  // Desenha as estrelas no espaço
   stroke(255);
   for (int i = 0; i < numStars; i++) {
     point(starsX[i], starsY[i]);
