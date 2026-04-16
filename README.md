@@ -39,6 +39,11 @@ Cada dupla implementa as seguintes **modificações preservando a arquitetura:**
 
 ## 🚀 *Etapa 3 - Extensão*
 - Ajustes realizados na pasta/projeto **`SistemaSolar`** presente nesse repositório e podem ser visualizados na figura abaixo:
+  - **Planeta com duas luas**
+    - Esse ajuste pode ser observado no planeta azul, que possui duas luas, enquanto os demais planetas possuem apenas uma.
+  - **Parâmetros visuais**
+    - Esse ajuste pode ser observado na variação de cores dos planetas, azul, verde e rosa. Além disso, ao comparar a lua do planeta verde com a do planeta rosa, é possível notar a diferença do tamanho das luas.
+<img width="579" height="417" alt="image" src="https://github.com/user-attachments/assets/9cc5ca18-44ef-4e59-906c-bd7435ea8a3c" />
 
 ## 📝 *Etapa 4 - Relatório*
 ### ***Resposta 1ª pergunta:***
